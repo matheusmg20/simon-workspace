@@ -1,0 +1,195 @@
+@import url(./../fonts/fonts.css);  /* Fonte padrão */
+@import url(./../colors/colors.css);  /* Cores padrão */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'outfit';
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--back);
+  color: var(--branco);
+  user-select: none;
+}
+
+/* ---------------------------- header */
+
+header{
+    background-color: var(--header);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.bi-list{
+    font-size: 30px;
+}
+
+#name_title{
+    color: var(--ciano);
+}
+
+.search{
+    background-color: var(--back_search);
+    padding: 5px 15px;
+    border-radius: 80px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 5px;
+}
+
+.search input{
+    width: 100%;
+    padding: 5px;
+    border-radius: 80px 0 0 80px;
+    border: none;
+    background-color: var(--back_search);
+    color: var(--branco);
+    outline: none;
+}
+
+.search input::placeholder{
+    color: var(--placeholder);
+}
+
+.search .bi-search{
+    color: var(--placeholder);
+}
+
+/* ---------------------------- sidebar */
+
+.sidebar{
+    background-color: var(--sidebar);
+    width: 320px;
+    height: calc(100dvh - 80px);
+    display: flex;
+    flex-direction: column;
+    transition: all .8s ease;
+    overflow: hidden;
+    will-change: width;
+}
+
+.sidebar ul {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 1s ease;
+}
+
+.sidebar ul li{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.sidebar ul li a{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 25px 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: .5s;
+}
+
+.sidebar ul li a:hover{
+    background-color: var(--hover_sidebar);
+}
+
+.sidebar ul li a i{
+    font-size: 1.5rem;
+    transition: transform 1s ease;
+}
+
+.sidebar a span {
+    display: inline-block;             /* para poder transformar sem afetar linhas */
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s ease;
+    white-space: nowrap;
+    will-change: opacity, transform;
+}
+
+.settings {
+    width: 100%;
+    display: flex;
+}
+
+.settings a {
+    padding: 25px 40px;
+    width: 100%;
+    transition: 1s ease;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.settings a:hover {
+    background-color: var(--hover_sidebar);
+}
+
+.settings a i {
+    font-size: 1.5rem;
+    transition: transform 1s ease;
+}
+
+
+/* ---------------------------- sidebar recolhida */
+
+.fade-out-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.35s ease;
+  pointer-events: none;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+    transition: width .8s ease;
+}
+
+.sidebar.collapsed a span {
+    opacity: 0;
+    transform: translateX(-20px);
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+}
+
+.sidebar.collapsed a {
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.sidebar.collapsed .settings a {
+    justify-content: center;
+}
+
+.sidebar.collapsed .settings a {
+    justify-content: center;
+    gap: 0;
+}
+
+/* ---------------------------- item ativo */
+
+.ativo {
+    background-color: var(--hover_sidebar);
+    border-left: solid 8px var(--ciano);
+}

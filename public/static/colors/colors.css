@@ -1,0 +1,11 @@
+:root{
+    --back: rgb(3, 11, 32);
+    --header: rgb(5, 18, 49);
+    --sidebar: rgb(10, 28, 70);
+    --hover_sidebar: rgb(18, 40, 94);
+    --back_search: rgb(10, 28, 70);
+    --placeholder: rgb(76, 106, 182);
+    --ciano: rgb(5, 168, 168);
+    --roxo: rgb(168, 5, 146);
+    --branco: rgb(255, 255, 255);
+}
