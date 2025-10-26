@@ -18,17 +18,32 @@
             <i class="bi bi-search"></i>
         </div>
     </header>
-    <aside class="sidebar" id="sidebar">
-        <ul>
-            <li><a href="#" class="ativo"><i class="bi bi-star"></i><span>Favoritos</span></a></li>
-            <li><a href="#"><i class="bi bi-bar-chart"></i><span>Power BI</span></a></li>
-            <li><a href="#"><i class="bi bi-search"></i><span>Consultas</span></a></li>
-            <li><a href="#"><i class="bi bi-graph-up"></i><span>Análises</span></a></li>
-        </ul>
-        <div class="settings"><a href="#"><i class="bi bi-gear"></i><span>Configurações</span></a></div>
-    </aside>
+    <div class="container">
+        <div class="overlay" id="overlay"></div>
+        <aside class="sidebar" id="sidebar">
+            <div class="search">
+                <input type="text" placeholder="Pesquise por algum item"/>
+                <i class="bi bi-search"></i>
+            </div>
+            <ul>
+                <li><a href="#favoritos" class="ativo"><i class="bi bi-star"></i><span>Favoritos</span></a></li>
+                <li><a href="#powerbi"><i class="bi bi-bar-chart"></i><span>Power BI</span></a></li>
+                <li><a href="#consultas"><i class="bi bi-search"></i><span>Consultas</span></a></li>
+                <li><a href="#analises"><i class="bi bi-graph-up"></i><span>Análises</span></a></li>
+            </ul>
+            <div class="settings"><a href="#"><i class="bi bi-gear"></i><span>Configurações</span></a></div>
+        </aside>
+
+        <section class="content">
+            <iframe src="./screen/favoritos.html" frameborder="0" id="favoritos"></iframe>
+            <iframe src="./screen/powerbi.html" frameborder="0" id="powerbi"></iframe>
+            <iframe src="./screen/consultas.html" frameborder="0" id="consultas"></iframe>
+            <iframe src="./screen/análises.html" frameborder="0" id="analises"></iframe>
+        </section>
+    </div>
 
     <script src="./static/js/toggle_menu.js"></script>
     <script src="./static/js/item_ativo.js"></script>
+    <script src="./static/js/responsive_sidebar.js"></script>
 </body>
 </html>
