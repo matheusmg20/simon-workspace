@@ -79,8 +79,6 @@ header h5{
     background: linear-gradient(to top, var(--item-overlay), transparent);
 }
 
-
-
 .item .description{
     display: flex;
     justify-content: space-between;
@@ -118,7 +116,7 @@ header h5{
     right: 0;
     padding: 10px;
     background-color: var(--back_star);
-    color: var(--star);
+    color: white;
     border-bottom-left-radius: 20px;
     font-size: 1.4rem;
     transition: transform 0.3s ease, color 0.3s ease;
